@@ -1,3 +1,6 @@
+This application is finding the path using Djkstra algorithm. Find the between the thief and the police. A policeman is of brown color icon and a thief is of red color icon.
+Made with ReactJS. The project is still under upgradation. I will finish it ASAP.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
