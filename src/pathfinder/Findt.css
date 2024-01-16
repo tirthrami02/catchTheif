@@ -1,0 +1,39 @@
+grid {
+    margin: 100px 0 0;
+}
+
+.greenButton {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    margin: 50px 10px 50px 0;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.greenButton:hover {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+.orangeButton {
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    margin: 50px 10px 50px 0;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.orangeButton:hover {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px rgb(231, 157, 20, 0.7);
+}
+
+.notification {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    margin: 50px 10px 50px 100px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
