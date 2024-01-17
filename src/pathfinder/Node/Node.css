@@ -6,7 +6,7 @@
 }
 
 .node-finish {
-    background-color: red !important;
+    background-color: rgb(45, 252, 3) !important;
 }
 
 .node-start {
@@ -64,16 +64,16 @@
 @keyframes shortestPath {
     0% {
         transform: scale(0.6);
-        background-color: yellow;
+        background-color: rgb(133, 133, 86);
     }
 
     50% {
         transform: scale(1.2);
-        background-color: yellow;
+        background-color: rgb(214, 214, 63);
     }
 
     100% {
         transform: scale(1);
-        background-color: yellow;
+        background-color: rgb(252, 252, 2);
     }
 }

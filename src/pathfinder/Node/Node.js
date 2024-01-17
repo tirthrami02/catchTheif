@@ -4,6 +4,7 @@ import './Node.css';
 
 export default class Node extends Component {
     render() {
+
         const {
             col,
             isFinish,
@@ -20,10 +21,12 @@ export default class Node extends Component {
         return (
             <div
                 id={`node-${row}-${col}`}
+                // id={isFinish ? 'finish' : isStart ? 'start' : `node-${row}-${col}`}
                 className={`node ${extraClassName}`}
                 onMouseDown={() => onMouseDown(row, col)}
                 onMouseEnter={() => onMouseEnter(row, col)}
-                onMouseUp={() => onMouseUp()}></div>
+                onMouseUp={() => onMouseUp()}>
+            </div>
         );
     }
 }
