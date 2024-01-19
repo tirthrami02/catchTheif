@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    padding: 5px 300px;
 }
 
 .secondnavbar p {
@@ -34,7 +34,7 @@
 
 .greenButton:hover {
     transform: translateY(2px);
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    box-shadow: 0 0 100px rgba(0, 255, 0, 0.9);
 }
 
 .orangeButton {
@@ -49,7 +49,7 @@
 
 .orangeButton:hover {
     transform: translateY(2px);
-    box-shadow: 0 0 10px rgb(231, 157, 20, 0.7);
+    box-shadow: 0 0 100px rgb(231, 157, 20, 0.9);
 }
 
 .notification {
@@ -58,27 +58,45 @@
     padding: 10px 15px;
     font-size: large;
     margin: 50px 10px 50px 0;
-    /* Updated margin */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .notification:hover {
-    box-shadow: 0 0 10px rgb(247, 3, 3);
+    box-shadow: 0 0 100px rgb(247, 3, 3, 0.9);
 }
 
 .githubLink {
     display: flex;
-    /* Added flex display */
     align-items: center;
-    /* Align items vertically */
     margin-left: auto;
-    /* Push to the right */
     padding: 10px;
-    /* Added padding for spacing */
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    margin: 50px 10px 50px 0;
+    cursor: pointer;
+    font-size: large;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
 }
-
+.githubLink:hover{
+    box-shadow: 0 0 100px rgb(99, 94, 94, 0.9);
+}
 .githubLink img {
     width: 30px;
     height: 30px;
     margin-right: 5px;
+}
+
+.mainTitle{
+    text-align: left;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgb(207, 197, 197);
+    padding: 12px 12px;
+}
+
+.all{
+    background-color: rgba(252, 254, 255, 0.568);
 }

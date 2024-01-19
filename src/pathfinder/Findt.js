@@ -87,72 +87,77 @@ export default class Findt extends Component {
 
     return (
       <>
-        <div className="mainnavbar">
-          <button
-            className='greenButton'
-            onClick={() => this.visualizeDijkstra()}>
-            Visualize Dijkstra's Algorithm
-          </button>
-          <button
-            className='orangeButton'
-            onClick={resetAlgo}>
-            Clear the board
-          </button>
-          <button
-            className='notification'>
-            Drag and drop cursor to create obstacles in the map.
-          </button>
-          <a
-            className='githubLink'
-            href='https://github.com/tirthrami02/catchTheif'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img
-              src='https://github.com/fluidicon.png'
-              alt='GitHub icon'
-              width='30'
-              height='30'
-            />
-            GitHub Link for Project
-          </a>
+        <div className="all">
+          <div className='mainTitle'>
+            PathFinder - By Dijkstra Algorithm
+          </div>
+          <div className="mainnavbar">
+            <button
+              className='greenButton'
+              onClick={() => this.visualizeDijkstra()}>
+              Visualize Dijkstra's Algorithm
+            </button>
+            <button
+              className='orangeButton'
+              onClick={resetAlgo}>
+              Clear the board
+            </button>
+            <button
+              className='notification'>
+              Drag and drop cursor to create obstacles in the map.
+            </button>
+            <a
+              className='githubLink'
+              href='https://github.com/tirthrami02/catchTheif'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <img
+                src='https://github.com/fluidicon.png'
+                alt='GitHub icon'
+                width='30'
+                height='30'
+              />
+              GitHub Link for Project
+            </a>
 
-        </div>
+          </div>
 
-        <div className="secondnavbar">
-          <p>🟫 - Police</p>
-          <p>🟩 - Theif</p>
-          <p>🟥 - Visited Nodes</p>
-          <p>🟨 - Final Path</p>
-          <p>⬜️ and 🟪 - Visualization</p>
-          <p>⬛️ - Obstacles</p>
-        </div>
+          <div className="secondnavbar">
+            <p>🟫 - Police</p>
+            <p>🟩 - Theif</p>
+            <p>🟥 - Visited Nodes</p>
+            <p>🟨 - Final Path</p>
+            <p>⬜️ and 🟪 - Visualization</p>
+            <p>⬛️ - Obstacles</p>
+          </div>
 
-        <div className="grid">
-          {grid.map((row, rowIdx) => {
-            return (
-              <div key={rowIdx}>
-                {row.map((node, nodeIdx) => {
-                  const { row, col, isFinish, isStart, isWall } = node;
-                  return (
-                    <Node
-                      key={nodeIdx}
-                      col={col}
-                      isFinish={isFinish}
-                      isStart={isStart}
-                      isWall={isWall}
-                      mouseIsPressed={mouseIsPressed}
-                      onMouseDown={(row, col) => this.handleMouseDown(row, col)}
-                      onMouseEnter={(row, col) =>
-                        this.handleMouseEnter(row, col)
-                      }
-                      onMouseUp={() => this.handleMouseUp()}
-                      row={row}></Node>
-                  );
-                })}
-              </div>
-            );
-          })}
+          <div className="grid">
+            {grid.map((row, rowIdx) => {
+              return (
+                <div key={rowIdx}>
+                  {row.map((node, nodeIdx) => {
+                    const { row, col, isFinish, isStart, isWall } = node;
+                    return (
+                      <Node
+                        key={nodeIdx}
+                        col={col}
+                        isFinish={isFinish}
+                        isStart={isStart}
+                        isWall={isWall}
+                        mouseIsPressed={mouseIsPressed}
+                        onMouseDown={(row, col) => this.handleMouseDown(row, col)}
+                        onMouseEnter={(row, col) =>
+                          this.handleMouseEnter(row, col)
+                        }
+                        onMouseUp={() => this.handleMouseUp()}
+                        row={row}></Node>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </>
     );
