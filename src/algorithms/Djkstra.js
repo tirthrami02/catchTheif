@@ -23,6 +23,7 @@ export function dijkstra(grid, startNode, finishNode) {
     }
 }
 
+// using minheap method to sort our unvisited nodes in order to perform dijkastra algorithm
 function sortNodesByDistance(unvisitedNodes) {
     unvisitedNodes.sort((nodeA, nodeB) => nodeA.distance - nodeB.distance);
 }
