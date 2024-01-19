@@ -5,10 +5,8 @@
 .mainnavbar {
     display: flex;
     justify-content: space-between;
-    /* Updated to space-between */
     align-items: center;
     padding: 0 20px;
-    /* Updated padding */
 }
 
 .secondnavbar {
