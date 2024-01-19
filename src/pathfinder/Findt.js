@@ -23,7 +23,7 @@ export default class Findt extends Component {
     const grid = getInitialGrid();
     this.setState({ grid });
   }
-  
+
   handleMouseDown(row, col) {
     const newGrid = getNewGridWithWallToggled(this.state.grid, row, col);
     this.setState({ grid: newGrid, mouseIsPressed: true });
@@ -49,8 +49,13 @@ export default class Findt extends Component {
       }
       setTimeout(() => {
         const node = visitedNodesInOrder[i];
-        document.getElementById(`node-${node.row}-${node.col}`).className =
-          'node node-visited';
+        document.getElementById(`node-${node.row}-${node.col}`).className = 'node node-visited';
+        document.getElementById(`node-${node.row}-${node.col}`).classList.add('highlighted-node');
+
+        setTimeout(() => {
+          document.getElementById(`node-${node.row}-${node.col}`).classList.remove('highlighted-node');
+        }, 500);
+
       }, 10 * i);
     }
   }
@@ -79,24 +84,35 @@ export default class Findt extends Component {
     const resetAlgo = () => {
       window.location.reload();
     }
-    
+
     return (
       <>
-        <button
-          className='greenButton'
-          onClick={() => this.visualizeDijkstra()}>
-          Visualize Dijkstra's Algorithm
-        </button>
-        <button
-          className='orangeButton'
-          onClick={resetAlgo}>
-          Clear the board
-        </button>
-        <button
-          className='notification'
-          onClick={resetAlgo}>
-          Drag and drop cursor to create obstacles in the map.
-        </button>
+        <div className="mainnavbar">
+          <button
+            className='greenButton'
+            onClick={() => this.visualizeDijkstra()}>
+            Visualize Dijkstra's Algorithm
+          </button>
+          <button
+            className='orangeButton'
+            onClick={resetAlgo}>
+            Clear the board
+          </button>
+          <button
+            className='notification'
+            onClick={resetAlgo}>
+            Drag and drop cursor to create obstacles in the map.
+          </button>
+        </div>
+
+        <div className="secondnavbar">
+          <p>🟫 - Police</p>
+          <p>🟩 - Theif</p>
+          <p>🟥 - Visited Nodes</p>
+          <p>🟨 - Final Path</p>
+          <p>⬜️ and 🟪 - Visualization</p>
+          <p>⬛️ - Obstacles</p>
+        </div>
 
         <div className="grid">
           {grid.map((row, rowIdx) => {

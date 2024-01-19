@@ -23,6 +23,9 @@
     animation-fill-mode: forwards;
     animation-play-state: running;
 }
+.highlighted-node{
+    background-color: #ffd60a !important;
+}
 
 @keyframes visitedAnimation {
     0% {

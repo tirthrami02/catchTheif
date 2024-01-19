@@ -2,11 +2,30 @@ grid {
     margin: 100px 0 0;
 }
 
+.mainnavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.secondnavbar{
+    display: flex;
+        justify-content: space-between;
+        /* evenly space items */
+        align-items: center;
+        padding: 10px 50px;
+}
+.secondnavbar p {
+    margin: 0;
+}
+
 .greenButton {
     background-color: green;
     color: white;
     padding: 10px 15px;
     margin: 50px 10px 50px 0;
+    font-size: large;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -22,6 +41,7 @@ grid {
     padding: 10px 15px;
     margin: 50px 10px 50px 0;
     cursor: pointer;
+    font-size: large;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -34,6 +54,10 @@ grid {
     background-color: red;
     color: white;
     padding: 10px 15px;
+    font-size: large;
     margin: 50px 10px 50px 100px;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+.notification:hover{
+    box-shadow: 0 0 10px rgb(247, 3, 3);
 }
