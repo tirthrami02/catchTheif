@@ -89,7 +89,7 @@ export default class Findt extends Component {
       <>
         <div className="all">
           <div className='mainTitle'>
-            PathFinder - By Dijkstra Algorithm
+            CatchTheif - By Dijkstra Algorithm
           </div>
           <div className="mainnavbar">
             <button
