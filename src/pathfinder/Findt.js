@@ -99,10 +99,24 @@ export default class Findt extends Component {
             Clear the board
           </button>
           <button
-            className='notification'
-            onClick={resetAlgo}>
+            className='notification'>
             Drag and drop cursor to create obstacles in the map.
           </button>
+          <a
+            className='githubLink'
+            href='https://github.com/tirthrami02/catchTheif'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img
+              src='https://github.com/fluidicon.png'
+              alt='GitHub icon'
+              width='30'
+              height='30'
+            />
+            GitHub Link for Project
+          </a>
+
         </div>
 
         <div className="secondnavbar">

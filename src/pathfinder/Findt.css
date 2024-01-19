@@ -1,21 +1,23 @@
-grid {
+.grid {
     margin: 100px 0 0;
 }
 
 .mainnavbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* Updated to space-between */
     align-items: center;
-    height: 100%;
+    padding: 0 20px;
+    /* Updated padding */
 }
 
-.secondnavbar{
+.secondnavbar {
     display: flex;
-        justify-content: space-between;
-        /* evenly space items */
-        align-items: center;
-        padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
 }
+
 .secondnavbar p {
     margin: 0;
 }
@@ -55,9 +57,28 @@ grid {
     color: white;
     padding: 10px 15px;
     font-size: large;
-    margin: 50px 10px 50px 100px;
+    margin: 50px 10px 50px 0;
+    /* Updated margin */
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.notification:hover{
+
+.notification:hover {
     box-shadow: 0 0 10px rgb(247, 3, 3);
+}
+
+.githubLink {
+    display: flex;
+    /* Added flex display */
+    align-items: center;
+    /* Align items vertically */
+    margin-left: auto;
+    /* Push to the right */
+    padding: 10px;
+    /* Added padding for spacing */
+}
+
+.githubLink img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
